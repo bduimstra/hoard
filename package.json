@@ -1,0 +1,27 @@
+{
+  "name": "hoard",
+  "version": "0.0.1",
+  "description": "A place for all your things",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn ./server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bduimstra/hoard.git"
+  },
+  "author": "bduimstra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bduimstra/hoard/issues"
+  },
+  "homepage": "https://github.com/bduimstra/hoard#readme",
+  "dependencies": {
+    "@types/express": "^4.17.7",
+    "express": "^4.17.1",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
+  }
+}
