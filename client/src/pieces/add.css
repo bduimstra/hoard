@@ -1,0 +1,14 @@
+.add button {
+  background: #8b8b8b;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #eeeeee;
+  font-size: 2rem;
+  height: calc(10px * 4);
+  transition: all 200ms linear;
+  width: calc(10px * 4);
+}
+.add button:hover {
+  background: #727272;
+}

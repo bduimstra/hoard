@@ -28604,12 +28604,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.App = void 0;
 var React = __importStar(__webpack_require__(1));
+var add_1 = __webpack_require__(20);
 var header_1 = __webpack_require__(13);
 __webpack_require__(18);
 exports.App = function () {
     return (React.createElement("div", null,
         React.createElement(header_1.Header, null),
-        React.createElement("main", null, "Hello World!"),
+        React.createElement("main", null,
+            React.createElement(add_1.Add, null)),
         React.createElement("footer", null)));
 };
 
@@ -28959,7 +28961,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "header {\n  background: #0a4b76;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "header {\n  background: #0a4b76;\n  color: #eeeeee;\n  padding: calc(10px * 2);\n}\n", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -29102,6 +29104,99 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap.css);"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  position: relative;\n}\nbody {\n  font-family: 'Quicksand', sans-serif;\n  font-size: 16px;\n}\n", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Add = void 0;
+var React = __importStar(__webpack_require__(1));
+var react_1 = __webpack_require__(1);
+__webpack_require__(21);
+exports.Add = function () {
+    var _a = react_1.useState(false), showSelection = _a[0], toggleSelection = _a[1];
+    react_1.useEffect(function () {
+        document.addEventListener('keydown', function (event) {
+            console.log(event);
+            if (event.code === 'KeyN') {
+                toggleSelection(true);
+            }
+        });
+        return document.removeEventListener('keydown', function () { return console.log('removed'); });
+    }, []);
+    return (React.createElement("div", { className: 'add' },
+        React.createElement("button", { onClick: function () { return toggleSelection(!showSelection); } }, "+"),
+        showSelection &&
+            React.createElement("ul", null,
+                React.createElement("li", null, "Link"),
+                React.createElement("li", null, "Image"),
+                React.createElement("li", null, "Color"),
+                React.createElement("li", null, "Note"))));
+};
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(15);
+            var content = __webpack_require__(22);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".add button {\n  background: #8b8b8b;\n  border: none;\n  border-radius: 50%;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);\n  color: #eeeeee;\n  font-size: 2rem;\n  height: calc(10px * 4);\n  transition: all 200ms linear;\n  width: calc(10px * 4);\n}\n.add button:hover {\n  background: #727272;\n}\n", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 

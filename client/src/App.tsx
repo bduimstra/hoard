@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Add } from './pieces/add';
 import { Header } from './components/header';
 
 import './app.less';
@@ -9,7 +10,7 @@ export const App: React.FC<{}> = () => {
         <div>
             <Header />
             <main>
-                Hello World!
+                <Add />
             </main>
             <footer></footer>
         </div>
