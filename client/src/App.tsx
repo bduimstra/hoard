@@ -1,9 +1,13 @@
 import * as React from 'react';
 
+import { Header } from './components/header';
+
+import './app.less';
+
 export const App: React.FC<{}> = () => {
     return (
         <div>
-            <header>Hoard</header>
+            <Header />
             <main>
                 Hello World!
             </main>
